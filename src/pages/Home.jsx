@@ -21,7 +21,7 @@ const Home = () => {
             <a href="#" className="hover:text-white transition">Sobre o evento</a>
           </div>
 
-          <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg text-sm font-semibold transition">
+          <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg text-sm font-semibold transition" href='/login'>
             Entrar
           </button>
         </nav>
