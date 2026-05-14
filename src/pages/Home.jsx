@@ -1,4 +1,6 @@
 import React from 'react';
+// Importando o ícone de tecnologia
+import { Cpu, Calendar, MonitorPlay, Users, LayoutDashboard } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -21,7 +23,7 @@ const Home = () => {
             <a href="#" className="hover:text-white transition">Sobre o evento</a>
           </div>
 
-          <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg text-sm font-semibold transition" href='/login'>
+          <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg text-sm font-semibold transition">
             Entrar
           </button>
         </nav>
@@ -35,18 +37,24 @@ const Home = () => {
               Participe do maior evento de tecnologia, inovação e transformação digital.
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-bold transition">
-                Entrar na plataforma
+              <button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-bold transition flex items-center gap-2">
+                <LayoutDashboard size={20} /> Entrar na plataforma
               </button>
-              <button className="border border-slate-600 hover:bg-white/10 px-8 py-3 rounded-lg font-bold transition">
-                Assistir transmissão
+              <button className="border border-slate-600 hover:bg-white/10 px-8 py-3 rounded-lg font-bold transition flex items-center gap-2">
+                <MonitorPlay size={20} /> Assistir transmissão
               </button>
             </div>
           </div>
           
+          {/* ILUSTRAÇÃO TECH (Substituindo o óculos) */}
           <div className="relative w-full max-w-md mx-auto">
-            <div className="aspect-square bg-gradient-to-tr from-blue-900/40 to-purple-900/40 rounded-3xl overflow-hidden border border-white/10 flex items-center justify-center">
-               <span className="text-blue-500 text-6xl opacity-50">🕶️</span>
+            <div className="aspect-square bg-gradient-to-tr from-blue-600/20 to-purple-600/20 rounded-[3rem] overflow-hidden border border-white/10 flex items-center justify-center relative group">
+                {/* Glow de fundo */}
+                <div className="absolute inset-0 bg-blue-500/10 blur-3xl group-hover:bg-blue-500/20 transition-all duration-500" />
+                
+                {/* Ícone de CPU/Tecnologia */}
+                <Cpu size={120} className="text-blue-500 opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500" strokeWidth={1.5} />
+              
             </div>
           </div>
         </div>
@@ -54,7 +62,9 @@ const Home = () => {
 
       {/* --- AGENDA SECTION --- */}
       <section className="max-w-7xl mx-auto px-10 py-16">
-        <h2 className="text-2xl font-bold mb-8">Agenda resumida</h2>
+        <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
+          <Calendar className="text-blue-600" /> Agenda resumida
+        </h2>
         
         <div className="flex gap-4 mb-10 overflow-x-auto pb-2">
           <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-bold whitespace-nowrap">12 JUN</button>
@@ -76,7 +86,7 @@ const Home = () => {
                   <p className="text-sm text-slate-400">{item.local}</p>
                 </div>
               </div>
-              <button className="text-blue-600 font-semibold text-sm bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 self-start sm:self-center">
+              <button className="text-blue-600 font-semibold text-sm bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 self-start sm:self-center transition">
                 Ver detalhes
               </button>
             </div>
@@ -87,8 +97,10 @@ const Home = () => {
       {/* --- ESTANDES SECTION --- */}
       <section className="max-w-7xl mx-auto px-10 py-16">
         <div className="flex justify-between items-end mb-8">
-          <h2 className="text-2xl font-bold">Estandes em destaque</h2>
-          <a href="#" className="text-blue-600 text-sm font-bold">Ver todos</a>
+          <h2 className="text-2xl font-bold flex items-center gap-2">
+            <Users className="text-blue-600" /> Estandes em destaque
+          </h2>
+          <a href="#" className="text-blue-600 text-sm font-bold hover:underline">Ver todos</a>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -99,8 +111,9 @@ const Home = () => {
             { name: "DevPro", desc: "Ferramentas para desenvolvedores", color: "bg-sky-500" }
           ].map((stand, idx) => (
             <div key={idx} className="group cursor-pointer">
-              <div className="aspect-[4/3] bg-slate-100 rounded-xl mb-4 border border-slate-200 flex items-center justify-center">
-                 <span className="text-slate-300 group-hover:scale-110 transition">🖼️</span>
+              <div className="aspect-[4/3] bg-slate-50 rounded-xl mb-4 border border-slate-100 flex items-center justify-center relative overflow-hidden">
+                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity ${stand.color}`} />
+                 <Cpu className="text-slate-200 group-hover:text-blue-400 group-hover:scale-110 transition duration-300" size={48} />
               </div>
               <div className="flex items-center gap-3 mb-2">
                 <div className={`w-3 h-3 rounded-full ${stand.color}`}></div>
@@ -125,36 +138,31 @@ const Home = () => {
             <p className="text-slate-400 text-sm leading-relaxed">
               Plataforma oficial do evento de inovação e tecnologia que conecta pessoas, empresas e ideias.
             </p>
-            <div className="flex gap-4 text-xl">
-              <span className="cursor-pointer opacity-70 hover:opacity-100">🔵</span>
-              <span className="cursor-pointer opacity-70 hover:opacity-100">📸</span>
-              <span className="cursor-pointer opacity-70 hover:opacity-100">💼</span>
-            </div>
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-lg">Navegação</h4>
+            <h4 className="font-bold mb-6 text-lg text-white">Navegação</h4>
             <ul className="text-slate-400 text-sm space-y-3">
-              <li><a href="#" className="hover:text-white">Início</a></li>
-              <li><a href="#" className="hover:text-white">Programação</a></li>
-              <li><a href="#" className="hover:text-white">Estandes</a></li>
-              <li><a href="#" className="hover:text-white">Sobre o evento</a></li>
+              <li><a href="#" className="hover:text-white transition">Início</a></li>
+              <li><a href="#" className="hover:text-white transition">Programação</a></li>
+              <li><a href="#" className="hover:text-white transition">Estandes</a></li>
+              <li><a href="#" className="hover:text-white transition">Sobre o evento</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-lg">Suporte</h4>
+            <h4 className="font-bold mb-6 text-lg text-white">Suporte</h4>
             <ul className="text-slate-400 text-sm space-y-3">
-              <li><a href="#" className="hover:text-white">Central de ajuda</a></li>
-              <li><a href="#" className="hover:text-white">Fale conosco</a></li>
+              <li><a href="#" className="hover:text-white transition">Central de ajuda</a></li>
+              <li><a href="#" className="hover:text-white transition">Fale conosco</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-lg">Contato</h4>
+            <h4 className="font-bold mb-6 text-lg text-white">Contato</h4>
             <ul className="text-slate-400 text-sm space-y-3">
-              <li>📧 contato@podtech.com.br</li>
-              <li>📞 (11) 99999-9999</li>
+              <li className="flex items-center gap-2">📧 contato@podtech.com.br</li>
+              <li className="flex items-center gap-2">📞 (11) 99999-9999</li>
             </ul>
           </div>
         </div>

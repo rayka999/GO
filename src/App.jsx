@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
-import DashboardParticipante from "./pages/DashboardParticipante";
-import DashboardAdmin from "./pages/dashboardAdmin";
+import Login from "./pages/Login"; //ok
+import DashboardParticipante from "./pages/DashboardParticipante"; //ok
+import DashboardAdmin from "./pages/dashboardAdmin"; //ok
 import Apresentacoes from "./pages/apresentacoes";
-import DashboardExpositor from "./pages/dashboard_expositor";
-import CrudAdmin from "./pages/crud_admin";
+import DashboardExpositor from "./pages/dashboard_expositor"; //ok
+import CrudAdmin from "./pages/crud_admin"; //ok
 
 export default function App() {
   return (

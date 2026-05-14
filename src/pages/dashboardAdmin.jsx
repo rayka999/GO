@@ -82,10 +82,6 @@ export default function DashboardAdmin() {
             <h2 className="text-3xl font-bold text-gray-800">
               Dashboard
             </h2>
-
-            <div className="bg-white border rounded-xl px-4 py-2 text-sm text-gray-500">
-              01/06/2024 - 14/06/2024
-            </div>
           </div>
 
           {/* CARDS */}
