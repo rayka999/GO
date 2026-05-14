@@ -38,7 +38,7 @@ export default function DashboardAdmin() {
               <div className="w-8 h-8 rounded-lg bg-violet-600"></div>
 
               <div>
-                <h1 className="font-bold text-lg">PODC</h1>
+                <h1 className="font-bold text-lg">POD Tech</h1>
                 <p className="text-xs text-gray-300">ADMIN</p>
               </div>
             </div>

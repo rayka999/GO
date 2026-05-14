@@ -48,7 +48,7 @@ export default function DashboardParticipante() {
             {/* LOGO */}
             <div className="flex items-center gap-2 mb-10">
               <div className="w-8 h-8 rounded-lg bg-violet-600"></div>
-              <h1 className="font-bold text-xl">PODC</h1>
+              <h1 className="font-bold text-xl">POD Tech</h1>
             </div>
 
             {/* MENU */}
@@ -60,7 +60,7 @@ export default function DashboardParticipante() {
 
               <button className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm text-gray-300 hover:bg-white/10">
                 <LayoutGrid size={18} />
-                Estandes
+                Estandes e apresentações
               </button>
 
               <button className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm text-gray-300 hover:bg-white/10">

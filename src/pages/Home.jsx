@@ -10,7 +10,7 @@ const Home = () => {
             <div className="w-8 h-8 bg-blue-600 rounded-md rotate-45 flex items-center justify-center">
               <span className="text-xs font-bold -rotate-45 text-white">P</span>
             </div>
-            <span className="text-xl font-bold tracking-tight">PODC</span>
+            <span className="text-xl font-bold tracking-tight">POD Tech</span>
           </div>
           
           <div className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
@@ -120,7 +120,7 @@ const Home = () => {
               <div className="w-8 h-8 bg-blue-600 rounded-md rotate-45 flex items-center justify-center">
                 <span className="text-xs font-bold -rotate-45">P</span>
               </div>
-              <span className="text-xl font-bold tracking-tight">PODC</span>
+              <span className="text-xl font-bold tracking-tight">POD Tech</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               Plataforma oficial do evento de inovação e tecnologia que conecta pessoas, empresas e ideias.
@@ -153,7 +153,7 @@ const Home = () => {
           <div>
             <h4 className="font-bold mb-6 text-lg">Contato</h4>
             <ul className="text-slate-400 text-sm space-y-3">
-              <li>📧 contato@podc.com.br</li>
+              <li>📧 contato@podtech.com.br</li>
               <li>📞 (11) 99999-9999</li>
             </ul>
           </div>
@@ -161,7 +161,7 @@ const Home = () => {
         
         <div className="border-t border-white/5 pt-10 text-center">
           <p className="text-slate-500 text-xs">
-            © 2024 PODC - Todos os direitos reservados
+            © 2026 POD Tech - Todos os direitos reservados
           </p>
         </div>
       </footer>

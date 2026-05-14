@@ -13,7 +13,7 @@ export default function LoginPage() {
           {/* Logo */}
           <div className="flex items-center gap-2 mb-6">
             <div className="w-8 h-8 bg-blue-600 rounded-md flex items-center justify-center text-white font-bold">P</div>
-            <h1 className="text-xl font-bold">PODC</h1>
+            <h1 className="text-xl font-bold">POD Tech</h1>
           </div>
 
           <h2 className="text-lg font-semibold mb-1">
